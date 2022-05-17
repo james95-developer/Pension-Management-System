@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pensionee Section</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+  </head>
+  <body>
+    <div>
+      <div class="booking-form3">
+          <h3 style="color: bisque;padding-top: 5%;">Register Your Details</h3>
+    
+    <form method="POST" action="/updateEmp/{{employee.eFname}}" class="forma">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label class="form-label">ID Number:</label>
+        
+        <input type="text" name="eFname" value="{{employee.eFname}}" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Phone Number:</label>
+        
+        <input type="text" name="eLname" value="{{employee.eLname}}" />
+      </div>
+
+      <br></br>
+
+      <button type="submit" class="btn-success">Register</button>
+    </form>
+  </div></div>
+  </body>
+</html>
